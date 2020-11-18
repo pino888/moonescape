@@ -129,7 +129,7 @@ body{
 
     .UI {
         width: 90%;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     #okButton {
@@ -138,5 +138,9 @@ body{
 
     #dialogBox {
         left: 5%;
+    }
+
+    .grid {
+        margin-top: 10px;
     }
 }
