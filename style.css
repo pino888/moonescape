@@ -129,6 +129,7 @@ body{
 
     .UI {
         width: 90%;
+        margin-top: 20px;
     }
 
     #okButton {
