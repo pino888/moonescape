@@ -216,10 +216,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerDisplay = document.querySelector('#timer');
     const timeTag = document.querySelector('#timeTag');
     const codeDisplay = document.querySelector('#code');
+    const taskTag = document.querySelector('#taskTag');
     var okButton = document.getElementById('okButton');
-
-    // timer for certain level, check if statememnt inside
-    //grid.addEventListener('click', timer);
 
     var cardsChosen = [];
     var cardsChosenId = [];
@@ -409,6 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function createBoard9() {
         gridLayoutChange(x);
         // create random order required for level 9
+        level = 9;
         codeCardArray.push(
             {name: '28', img: 'images/setcode/28.png'}, {name: '28', img: 'images/setcode/28.png'}, {name: '34', img: 'images/setcode/34.png'}, {name: '34', img: 'images/setcode/34.png'}, {name: '76', img: 'images/setcode/76.png'}, {name: '76', img: 'images/setcode/76.png'}, {name: '88', img: 'images/setcode/88.png'}, {name: '88', img: 'images/setcode/88.png'});
         codeCardArray.forEach(element => {
@@ -419,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
         backCardArray.push(
             {name: 'vir17', img: 'images/backset/vir17.png'}, {name: 'vir18', img: 'images/backset/vir18.png'}, {name: 'vir19', img: 'images/backset/vir19.png'}, {name: 'vir20', img: 'images/backset/vir20.png'});
         specificOrder.sort(() => 0.5 - Math.random());
-        taskDisplay.innerHTML = "Find the match in order";
+        taskTag.style.display = 'none';
         codeDisplay.style.display = 'block';
         codeDisplay.innerHTML = `Code: ${specificOrder.join('-')}`;
         codeCardArray.sort(() => 0.5 - Math.random());
@@ -440,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
         minute = 1;
         sec = 30;
         gridLayoutChange(x);
-        taskDisplay.innerHTML = "This is the last level";
+        taskTag.style.display = 'none';
         codeDisplay.style.display = 'none';
         timeTag.style.display = 'block';
         cardArray.sort(() => 0.5 - Math.random());
@@ -673,7 +672,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    createBoard();
+    createBoard9();
     Alert.render("Hello astronaut! I'm <b>Alexis</b>, your personal assistant. You won't remember but you have crashed your buggy on the surface of the moon. Find your way back to the base by <u>matching all the cards</u>.");
     okButton.addEventListener('click', alertOff);
 })
