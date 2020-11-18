@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="app.js" ></script>
+    <title>Moon Escape</title>
+</head>
+<body>
+    <div id="dialogBoxOverlay"></div>
+    <div id="dialogBox">
+        <div id="dialogParent">
+            <div id="dialogBoxBody"></div>
+            <div id="dialogBoxFoot"><button id="okButton">OK</button></div>
+        </div>
+    </div>
+    <div class="gameWindow">
+        <div class="UI">
+            <div class="scoreContainer">
+                <h3>Level: <span id="level">1</span></h3>
+                <h3>Score: <span id="score">0</span></h3>
+            </div>
+            <div class="taskContainer">
+                <h3>Task: <span id="task"></span></h3>
+                <h3 id="timeTag">Time left: <span id="timer"></span></h3>
+                <h3 id="code"></h3>
+            </div>
+        </div>
+        <div class="grid"></div>
+    </div>
+</body>
+</html>
